@@ -40,7 +40,7 @@ void main() {
       name: "Tokyo Ghoul",
       originalName: "東京喰種トーキョーグール");
   final tMovieList = <Tv>[tMovieModel];
-  final tQuery = 'game of thrones';
+  final tQuery = 'Tokyo Ghoul';
 
   group('search movies', () {
     test('should change state to loading when usecase is called', () async {

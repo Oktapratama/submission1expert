@@ -16,16 +16,16 @@ void main() {
   });
 
   final tId = 1;
-  final tMovies = <Tv>[];
+  final tTv = <Tv>[];
 
   test('should get list of movie recommendations from the repository',
           () async {
         // arrange
         when(mockTvRepository.getTvRecommendations(tId))
-            .thenAnswer((_) async => Right(tMovies));
+            .thenAnswer((_) async => Right(tTv));
         // act
         final result = await usecase.execute(tId);
         // assert
-        expect(result, Right(tMovies));
+        expect(result, Right(tTv));
       });
 }

@@ -15,15 +15,15 @@ void main() {
     usecase = GetTopRatedTv(mockTvRepository);
   });
 
-  final tMovies = <Tv>[];
+  final tTv = <Tv>[];
 
   test('should get list of movies from repository', () async {
     // arrange
     when(mockTvRepository.getTopRatedTv())
-        .thenAnswer((_) async => Right(tMovies));
+        .thenAnswer((_) async => Right(tTv));
     // act
     final result = await usecase.execute();
     // assert
-    expect(result, Right(tMovies));
+    expect(result, Right(tTv));
   });
 }

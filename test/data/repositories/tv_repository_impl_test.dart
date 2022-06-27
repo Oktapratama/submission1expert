@@ -29,35 +29,35 @@ void main() {
   });
 
   final tTvModel = ModelTv(
-    posterPath: "/jIhL6mlT7AblhbHJgEoiBIOUVl1.jpg",
-    popularity: 29.780826,
-    id: 1399,
-    backdropPath: "/mUkuc2wyV9dHLG0D0Loaw5pO2s8.jpg",
-    voteAverage: 7.91,
-    overview:
-    "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
-    originCountry: ["US"],
-    genreIds: [10765, 10759, 18],
-    originalLanguage: "en",
-    voteCount: 1172,
-    name: "Game of Thrones",
-    originalName: "Game of Thrones",
+      posterPath: "/y2roOFsew9nJKKVwwJCHSyzgpK9.jpg",
+      popularity: 130.362,
+      id: 61374,
+      backdropPath: "/yOarY3Yo0NMkuTuft87M5oAZa3C.jpg",
+      voteAverage: 8.5,
+      overview:
+      "Ken Kaneki is a bookworm college student who meets a girl names Rize at a cafe he frequents. They're the same age and have the same interests, so they quickly become close. Little does Kaneki know that Rize is a ghoul – a kind of monster that lives by hunting and devouring human flesh. When part of her special organ – \"the red child\" – is transplanted into Kaneki, he becomes a ghoul himself, trapped in a warped world where humans are not the top of the food chain.",
+      originCountry: ["JP"],
+      genreIds: [10759,16,18,9648],
+      originalLanguage: "ja",
+      voteCount: 1821,
+      name: "Tokyo Ghoul",
+      originalName: "東京喰種トーキョーグール",
   );
 
   final tTv = Tv(
-      posterPath: "/jIhL6mlT7AblhbHJgEoiBIOUVl1.jpg",
-      popularity: 29.780826,
-      id: 1399,
-      backdropPath: "/mUkuc2wyV9dHLG0D0Loaw5pO2s8.jpg",
-      voteAverage: 7.91,
+      posterPath: "/y2roOFsew9nJKKVwwJCHSyzgpK9.jpg",
+      popularity: 130.362,
+      id: 61374,
+      backdropPath: "/yOarY3Yo0NMkuTuft87M5oAZa3C.jpg",
+      voteAverage: 8.5,
       overview:
-      "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
-      originCountry: ["US"],
-      genreIds: [10765, 10759, 18],
-      originalLanguage: "en",
-      voteCount: 1172,
-      name: "Game of Thrones",
-      originalName: "Game of Thrones");
+      "Ken Kaneki is a bookworm college student who meets a girl names Rize at a cafe he frequents. They're the same age and have the same interests, so they quickly become close. Little does Kaneki know that Rize is a ghoul – a kind of monster that lives by hunting and devouring human flesh. When part of her special organ – \"the red child\" – is transplanted into Kaneki, he becomes a ghoul himself, trapped in a warped world where humans are not the top of the food chain.",
+      originCountry: ["JP"],
+      genreIds: [10759,16,18,9648],
+      originalLanguage: "ja",
+      voteCount: 1821,
+      name: "Tokyo Ghoul",
+      originalName: "東京喰種トーキョーグール");
 
   final tTvModelList = <ModelTv>[tTvModel];
   final tTvList = <Tv>[tTv];

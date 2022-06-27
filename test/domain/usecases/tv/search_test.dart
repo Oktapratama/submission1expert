@@ -16,7 +16,7 @@ void main() {
   });
 
   final tTv = <Tv>[];
-  final tQuery = 'Moon Knight';
+  final tQuery = 'Metal Family';
 
   test('should get list of movies from the repository', () async {
     // arrange

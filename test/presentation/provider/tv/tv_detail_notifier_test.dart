@@ -65,13 +65,13 @@ void main() {
       voteCount: 1821,
       name: "Tokyo Ghoul",
       originalName: "東京喰種トーキョーグール");
-  final tMovies = <Tv>[tTv];
+  final tTvs = <Tv>[tTv];
 
   void _arrangeUsecase() {
     when(mockGetTvDetail.execute(tId))
         .thenAnswer((_) async => Right(testTvDetail));
     when(mockGetTvRecommendations.execute(tId))
-        .thenAnswer((_) async => Right(tMovies));
+        .thenAnswer((_) async => Right(tTvs));
   }
 
   group('Get Tv Detail', () {
@@ -114,7 +114,7 @@ void main() {
       await provider.fetchTvDetail(tId);
       // assert
       expect(provider.tvState, RequestState.Loaded);
-      expect(provider.tvRecommendations, tMovies);
+      expect(provider.tvRecommendations, tTvs);
     });
   });
 
@@ -126,7 +126,7 @@ void main() {
       await provider.fetchTvDetail(tId);
       // assert
       verify(mockGetTvRecommendations.execute(tId));
-      expect(provider.tvRecommendations, tMovies);
+      expect(provider.tvRecommendations, tTvs);
     });
 
     test('should update recommendation state when data is gotten successfully',
@@ -137,7 +137,7 @@ void main() {
       await provider.fetchTvDetail(tId);
       // assert
       expect(provider.recommendationState, RequestState.Loaded);
-      expect(provider.tvRecommendations, tMovies);
+      expect(provider.tvRecommendations, tTvs);
     });
 
     test('should update error message when request in successful', () async {
@@ -223,7 +223,7 @@ void main() {
       when(mockGetTvDetail.execute(tId))
           .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
       when(mockGetTvRecommendations.execute(tId))
-          .thenAnswer((_) async => Right(tMovies));
+          .thenAnswer((_) async => Right(tTvs));
       // act
       await provider.fetchTvDetail(tId);
       // assert

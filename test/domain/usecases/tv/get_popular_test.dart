@@ -15,7 +15,7 @@ void main() {
     usecase = GetPopularTv(mockTvRpository);
   });
 
-  final tMovies = <Tv>[];
+  final tTv = <Tv>[];
 
   group('GetPopularTv Tests', () {
     group('execute', () {
@@ -24,11 +24,11 @@ void main() {
               () async {
             // arrange
             when(mockTvRpository.getPopularTv())
-                .thenAnswer((_) async => Right(tMovies));
+                .thenAnswer((_) async => Right(tTv));
             // act
             final result = await usecase.execute();
             // assert
-            expect(result, Right(tMovies));
+            expect(result, Right(tTv));
           });
     });
   });
