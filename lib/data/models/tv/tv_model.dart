@@ -4,7 +4,7 @@ import '../../../domain/entities/tv/tv.dart';
 class ModelTv extends Equatable {
   ModelTv({
     required this.backdropPath,
-    required this.firstAirDate,
+    //required this.firstAirDate,
     required this.genreIds,
     required this.id,
     required this.name,
@@ -19,7 +19,7 @@ class ModelTv extends Equatable {
   });
 
   final String? backdropPath;
-  final DateTime? firstAirDate;
+  //final DateTime? firstAirDate;
   final List<int> genreIds;
   final int id;
   final String? name;
@@ -34,7 +34,7 @@ class ModelTv extends Equatable {
 
   factory ModelTv.fromJson(Map<String, dynamic> json) => ModelTv(
     backdropPath: json["backdrop_path"],
-    firstAirDate: DateTime.parse(json["first_air_date"]),
+    //firstAirDate: DateTime.parse(json["first_air_date"]),
     genreIds: List<int>.from(json["genre_ids"].map((x) => x)),
     id: json["id"],
     name: json["name"],
@@ -50,7 +50,7 @@ class ModelTv extends Equatable {
 
   Map<String, dynamic> toJson() => {
     "backdrop_path": backdropPath,
-    "first_air_date": "${firstAirDate?.year.toString()}",
+    //"first_air_date": "${firstAirDate?.year.toString()}",
     "genre_ids": List<dynamic>.from(genreIds.map((x) => x)),
     "id": id,
     "name": name,
@@ -67,7 +67,7 @@ class ModelTv extends Equatable {
   Tv toEntity() {
     return Tv(
       backdropPath : this.backdropPath,
-      firstAirDate : this.firstAirDate,
+      //firstAirDate : this.firstAirDate,
       genreIds : this.genreIds,
       id : this.id,
       name : this.name,
@@ -85,7 +85,7 @@ class ModelTv extends Equatable {
   @override
   List<Object?> get props => [
     backdropPath,
-    firstAirDate,
+    //firstAirDate,
     genreIds,
     id,
     name,

@@ -4,7 +4,7 @@ import '../genre_model.dart';
 
 class ModelDetailTv extends Equatable {
   ModelDetailTv({
-    required this.adult,
+    // required this.adult,
     required this.backdropPath,
     required this.episodeRunTime,
     required this.firstAirDate,
@@ -13,8 +13,9 @@ class ModelDetailTv extends Equatable {
     required this.id,
     required this.inProduction,
     required this.lastAirDate,
+    required this.languages,
     required this.name,
-    required this.nextEpisodeToAir,
+    // required this.nextEpisodeToAir,
     required this.numberOfEpisodes,
     required this.numberOfSeasons,
     required this.originCountry,
@@ -30,7 +31,7 @@ class ModelDetailTv extends Equatable {
     required this.voteCount,
   });
 
-  final bool adult;
+  // final bool adult;
   final String backdropPath;
   final List<int> episodeRunTime;
   final DateTime firstAirDate;
@@ -38,9 +39,10 @@ class ModelDetailTv extends Equatable {
   final String homepage;
   final int id;
   final bool inProduction;
+  List<String> languages;
   final DateTime lastAirDate;
   final String name;
-  final dynamic nextEpisodeToAir;
+  // final dynamic nextEpisodeToAir;
   final int numberOfEpisodes;
   final int numberOfSeasons;
   final List<String> originCountry;
@@ -57,7 +59,7 @@ class ModelDetailTv extends Equatable {
 
 
   factory ModelDetailTv.fromJson(Map<String, dynamic> json) => ModelDetailTv(
-    adult: json["adult"],
+    // adult: json["adult"],
     backdropPath: json["backdrop_path"],
     episodeRunTime: List<int>.from(json["episode_run_time"].map((x) => x)),
     firstAirDate: DateTime.parse(json["first_air_date"]),
@@ -65,9 +67,10 @@ class ModelDetailTv extends Equatable {
     homepage: json["homepage"],
     id: json["id"],
     inProduction: json["in_production"],
+    languages: List<String>.from(json["languages"].map((x) => x)),
     lastAirDate: DateTime.parse(json["last_air_date"]),
     name: json["name"],
-    nextEpisodeToAir: json["next_episode_to_air"],
+    // nextEpisodeToAir: json["next_episode_to_air"],
     numberOfEpisodes: json["number_of_episodes"],
     numberOfSeasons: json["number_of_seasons"],
     originCountry: List<String>.from(json["origin_country"].map((x) => x)),
@@ -91,9 +94,10 @@ class ModelDetailTv extends Equatable {
     "homepage": homepage,
     "id": id,
     "in_production": inProduction,
+    "languages": List<dynamic>.from(languages.map((x) => x)),
     "last_air_date": "${lastAirDate.year.toString().padLeft(4, '0')}-${lastAirDate.month.toString().padLeft(2, '0')}-${lastAirDate.day.toString().padLeft(2, '0')}",
     "name": name,
-    "next_episode_to_air": nextEpisodeToAir,
+    // "next_episode_to_air": nextEpisodeToAir,
     "number_of_episodes": numberOfEpisodes,
     "number_of_seasons": numberOfSeasons,
     "origin_country": List<dynamic>.from(originCountry.map((x) => x)),
@@ -118,9 +122,10 @@ class ModelDetailTv extends Equatable {
         homepage: this.homepage,
         id: this.id,
         inProduction: this.inProduction,
+        languages: languages,
         lastAirDate: this.lastAirDate,
         name: this.name,
-        nextEpisodeToAir: this.nextEpisodeToAir,
+        // nextEpisodeToAir: this.nextEpisodeToAir,
         numberOfEpisodes: this.numberOfEpisodes,
         numberOfSeasons: this.numberOfSeasons,
         originalLanguage: this.originalLanguage,
@@ -146,9 +151,10 @@ class ModelDetailTv extends Equatable {
     homepage,
     id,
     inProduction,
+    languages,
     lastAirDate,
     name,
-    nextEpisodeToAir,
+    // nextEpisodeToAir,
     numberOfEpisodes,
     numberOfSeasons,
     originCountry,

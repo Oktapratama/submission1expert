@@ -10,9 +10,10 @@ class DetailTv extends Equatable {
     required this.homepage,
     required this.id,
     required this.inProduction,
+    required this.languages,
     required this.lastAirDate,
     required this.name,
-    required this.nextEpisodeToAir,
+    // required this.nextEpisodeToAir,
     required this.numberOfEpisodes,
     required this.numberOfSeasons,
     required this.originCountry,
@@ -36,9 +37,10 @@ class DetailTv extends Equatable {
   String homepage;
   int id;
   bool inProduction;
+  List<String> languages;
   DateTime lastAirDate;
   String name;
-  dynamic nextEpisodeToAir;
+  // dynamic nextEpisodeToAir;
   int numberOfEpisodes;
   int numberOfSeasons;
   List<String> originCountry;
@@ -63,9 +65,10 @@ class DetailTv extends Equatable {
     homepage,
     id,
     inProduction,
+    languages,
     lastAirDate,
     name,
-    nextEpisodeToAir,
+    // nextEpisodeToAir,
     numberOfEpisodes,
     numberOfSeasons,
     originCountry,
